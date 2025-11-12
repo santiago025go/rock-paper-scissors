@@ -47,3 +47,31 @@ function playRound() {
     }    
     return [winner, humanChoice, computerChoice];
 }
+
+function playGame(){
+    let computerScore = 0;
+    let humanScore = 0;
+    let roundResults;
+    alert(`Welcome to rock paper scissors game! You will be playing five rounds against computer.`);
+    for(let i = 1 ; i <= 5 ; i++){
+        alert(`Round ${i}:`);
+        roundResults = playRound();
+        if(roundResults[0] === 'human') {
+            humanScore++;
+            alert(`YOU WIN! ${roundResults[1]} beats ${roundResults[2]}.`);
+        } else if(roundResults[0] === 'computer') {
+            computerScore++;
+            alert(`YOU LOSE! ${roundResults[2]} beats ${roundResults[1]}.`);
+        } else {
+            alert(`DRAW! both of you chose ${roundResults[1]}.`);
+        }
+        alert(`Round ${i} scores. YOU : ${humanScore} --- COMPUTER : ${computerScore}`)
+    }
+    if(computerScore === humanScore) {
+        alert(`THIS IS A DRAW! FINAL SCORES || You : ${humanScore} --- Computer : ${computerScore} ||`);
+    } else if(humanScore > computerScore) {
+        alert(`YOU WIN THE GAME! FINAL SCORES || You : ${humanScore} --- Computer : ${computerScore} ||`);
+    } else {
+        alert(`COMPUTER WINS THE GAME! FINAL SCORES || You : ${humanScore} --- Computer : ${computerScore} ||`);
+    }
+}
