@@ -27,3 +27,23 @@ function getHumanChoice() {
             return getHumanChoice();    
     }
 }
+
+function playRound() {
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+    let winner;
+    switch(humanChoice) {
+        case computerChoice:
+            winner = 'draw';
+            break;
+        case 'rock':
+            winner = computerChoice === 'paper' ? 'computer' : 'human';
+            break;
+        case 'paper':
+            winner = computerChoice === 'rock' ? 'human' : 'computer';
+            break;
+        case 'scissors':
+            winner = computerChoice === 'rock' ? 'computer' : 'human';    
+    }    
+    return [winner, humanChoice, computerChoice];
+}
