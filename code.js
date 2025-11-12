@@ -75,3 +75,5 @@ function playGame(){
         alert(`COMPUTER WINS THE GAME! FINAL SCORES || You : ${humanScore} --- Computer : ${computerScore} ||`);
     }
 }
+
+playGame();
