@@ -87,4 +87,5 @@ p {
 
 #game-over-button:hover {
     background-color: #02e3f7;
+    cursor: pointer;
 }

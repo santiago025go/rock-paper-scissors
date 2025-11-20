@@ -18,7 +18,9 @@ function getHumanChoice(event) {
         case 'paper':
             return choice;
         case 'scissors':
-            return choice;   
+            return choice;
+        default:
+            return 'undefined';   
     }
 }
 
@@ -56,6 +58,7 @@ function gameOver() {
 
 function playRound(event) {
     let humanChoice = getHumanChoice(event);
+    if(humanChoice === 'undefined') return;
     let computerChoice = getComputerChoice();
     let winner;
     let finalWinner = document.querySelector('#final-winner');
