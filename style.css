@@ -49,6 +49,7 @@ h2 {
 .results {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .choices {
@@ -65,4 +66,25 @@ p {
     text-align: center;
     font-size: 30px;
     padding: 10px 20px;
+}
+
+.game-over {
+    padding: 20px;
+    background-color: #ddd;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+#game-over-button {
+    background-color: #52c6d1;
+    border-radius: 16px;
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+    border: none;
+    margin-top: 10px;   
+}
+
+#game-over-button:hover {
+    background-color: #02e3f7;
 }

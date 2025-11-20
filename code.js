@@ -39,6 +39,21 @@ function updatePage(humanChoice, computerChoice, winner) {
     drawP.textContent = 'Draw: ' + draw;
 }
 
+function gameOver() {
+    let finalWinner = document.querySelector('#final-winner');
+    let headerTwo = document.querySelector('h2');
+    let results = document.querySelector('.results');
+    let gameOverButton = document.createElement('button');
+    headerTwo.style.display = 'none';
+    buttons.style.display = 'none';
+    results.classList += ' game-over';
+    finalWinner.innerHTML = humanScore > computerScore ? 'You win the game! &#128526;' : 'You lose the game! &#128534;';
+    gameOverButton.id = 'game-over-button';
+    gameOverButton.textContent = 'Play again';
+    gameOverButton.addEventListener('click', () => location.reload());
+    results.appendChild(gameOverButton);
+}
+
 function playRound(event) {
     let humanChoice = getHumanChoice(event);
     let computerChoice = getComputerChoice();
@@ -71,11 +86,7 @@ function playRound(event) {
     updatePage(humanChoice, computerChoice, winner);
     
     if(humanScore === 5 || computerScore === 5) {
-        finalWinner.innerHTML = humanScore > computerScore ? 'You win the game! &#128526;' : 'You lose the game! &#128534;' ;
-        humanScore = 0;
-        computerScore = 0;
-        draw = 0;
-        round = 0;
+        gameOver();
     }
 
 }
