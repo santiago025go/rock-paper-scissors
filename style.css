@@ -5,7 +5,7 @@
 }
 
 body {
-    margin: 100px;
+    margin: 70px;
 }
 
 h1 {
@@ -14,7 +14,7 @@ h1 {
     margin-bottom: 15px;
 }
 
-p {
+#instructions {
     text-align: center;
     font-size: 30px;
     margin-bottom: 90px;
@@ -44,4 +44,25 @@ h2 {
 .buttons button:hover {
     background-color: #02e3f7;
     cursor: pointer;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+}
+
+.round {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 20px;
 }
