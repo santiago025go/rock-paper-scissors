@@ -11,11 +11,37 @@ body {
 h1 {
     text-align: center;
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 p {
     text-align: center;
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 90px;
+}
+
+.buttons button {
+    font-size: 90px;
+    padding: 20px;
+    background-color: #52c6d1;
+    border: none;
+    border-radius: 16px;
+}
+
+.buttons button:hover {
+    background-color: #02e3f7;
+    cursor: pointer;
 }
